@@ -1,0 +1,88 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e27396;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.search-container{
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#searchInput{
+    padding: 8px;
+    width: 200px;
+    font-size: 16px;
+    flex: 1;
+}
+
+#searchButton{
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.product-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.product-button{
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    width: 150px;
+    transition: transform 0.2s;
+}
+
+.product-button:hover{
+    transform: scale(1.05);
+}
+
+.in-stock{
+    background-color: #f1cebe;
+    color: #000000;
+}
+
+.out-of-stock{
+    background-color: #b3dee2;
+    color: #000000;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px){
+    #searchInput{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .search-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .product-button{
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px){
+    #searchInput, #searchButton{
+        font-size: 14px;
+    }
+    .product-button{
+        font-size: 14px;
+        padding: 8px;
+    }
+}
